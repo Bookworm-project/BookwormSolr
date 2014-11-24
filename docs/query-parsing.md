@@ -119,6 +119,7 @@ or,
 ### Lucene
 
 ```
-(+(year:[1980 TO 1992] year:[2001 TO 2008]) +author_party:Republican) OR (+(year:[1993 TO 2000] year:2009) +author_party:Democrat)
+(+(year:[1980 TO 1992] year:[2001 TO 2008]) AND +author_party:Republican) \
+	OR (+(year:[1993 TO 2000] year:[2009 TO *]) AND +author_party:Democrat)
 ```
 
