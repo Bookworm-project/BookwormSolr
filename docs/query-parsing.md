@@ -24,7 +24,7 @@ Adapting the translation of Bookworm API to Solr will need to be done later, but
 - support for backend-specific features
 - UI integration of warnings with missing features
 - which lucene features /should/ we support?
-- see also ![Open Questions in Bookworm docs](http://bookworm-project.github.io/Docs/Search_Limiting.html)
+- see also [Open Questions in Bookworm docs](http://bookworm-project.github.io/Docs/Search_Limiting.html)
 
 ## Comparison
 
@@ -119,6 +119,7 @@ or,
 ### Lucene
 
 ```
-(+(year:[1980 TO 1992] year:[2001 TO 2008]) +author_party:Republican) OR (+(year:[1993 TO 2000] year:2009) +author_party:Democrat)
+(+(year:[1980 TO 1992] year:[2001 TO 2008]) AND +author_party:Republican) \
+	OR (+(year:[1993 TO 2000] year:[2009 TO *]) AND +author_party:Democrat)
 ```
 
